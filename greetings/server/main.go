@@ -5,10 +5,8 @@ import (
 	"fmt"
 	"log"
 	"net"
-	"strconv"
-	"time"
 
-	"github.com/awsome_projects/greet_many_times/greetpb"
+	"github.com/sajanjswl/greetings/greetpb"
 
 	"google.golang.org/grpc"
 )
@@ -28,24 +26,9 @@ func (*server) Greet(ctx context.Context, req *greetpb.GreetRequest) (*greetpb.G
 	return res, nil
 }
 
-func (*server) GreetManyTimes(req *greetpb.GreetManyTimesRequest, stream greetpb.GreetService_GreetManyTimesServer) error {
-
-	firstName := req.GetGreeting().GetFirstName()
-	for i := 0; i < 10; i++ {
-
-		result := "hello " + firstName + "" + strconv.Itoa(i)
-		res := &greetpb.GreetManyTimesResponse{
-			Result: result,
-		}
-		stream.Send(res)
-		time.Sleep(1000 * time.Millisecond)
-	}
-	return nil
-}
-
 func main() {
 
-	fmt.Println("hello veer")
+	fmt.Println("hello dsfk")
 
 	lis, err := net.Listen("tcp", "0.0.0.0:50051")
 

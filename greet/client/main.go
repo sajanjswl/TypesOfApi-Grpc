@@ -6,7 +6,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/hyperledger/awsome_projects/greeting/greet_greetpb/greetpb"
+	"github.com/sajanjswl/greet/greetpb"
 )
 
 func main() {
