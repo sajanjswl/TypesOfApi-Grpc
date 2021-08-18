@@ -1,9 +1,0 @@
-
-
-syntax ="proto3";
-
-package greetpb;
-
-//option go_package = "greetpb";
-
-service GreetService {}

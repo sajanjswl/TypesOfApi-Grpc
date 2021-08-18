@@ -6,7 +6,7 @@ import (
 	"log"
 	"net"
 
-	"github.com/sajanjswl/greetings/greetpb"
+	"github.com/sajanjswl/greet/proto/greet/greetpb"
 
 	"google.golang.org/grpc"
 )
@@ -44,3 +44,5 @@ func main() {
 	}
 
 }
+
+// https://github.com/namely/docker-protoc
